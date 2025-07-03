@@ -1,0 +1,59 @@
+:root {
+
+/* ### Primary */
+
+--Green-400: hsl(172, 67%, 45%);
+
+/* ### Neutral */
+
+--Green-900: hsl(183, 100%, 15%);
+--Grey-500: hsl(186, 14%, 43%);
+--Grey-400: hsl(184, 14%, 56%);
+--Grey-200: hsl(185, 41%, 84%);
+--Grey-50: hsl(189, 47%, 97%);
+--White: hsl(0, 100%, 100%);
+
+/* ## Typography */
+
+--Font-size: 24px;
+
+/* Misc */
+--B-radius: 1.7rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono";
+}
+
+hmtl {
+    height:100vh;
+    width: 100vw;
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+}
+
+.main-container {
+    background-color: var(--Grey-200);
+}
+
+.header {
+    text-align: center;
+    & .header-text {
+        letter-spacing: .3rem;
+        color: var(--Green-900);
+        padding: 2rem 0;
+    }
+}
+
+.bill {
+    background-color: var(--White);
+    padding: 1.5rem;
+    border-top-left-radius: var(--B-radius);
+    border-top-right-radius: var(--B-radius);
+}
