@@ -1,59 +1,98 @@
 :root {
+  /* ### Primary */
 
-/* ### Primary */
+  --Green-400: hsl(172, 67%, 45%);
 
---Green-400: hsl(172, 67%, 45%);
+  /* ### Neutral */
 
-/* ### Neutral */
+  --Green-900: hsl(183, 100%, 15%);
+  --Grey-500: hsl(186, 14%, 43%);
+  --Grey-400: hsl(184, 14%, 56%);
+  --Grey-200: hsl(185, 41%, 84%);
+  --Grey-50: hsl(189, 47%, 97%);
+  --White: hsl(0, 100%, 100%);
 
---Green-900: hsl(183, 100%, 15%);
---Grey-500: hsl(186, 14%, 43%);
---Grey-400: hsl(184, 14%, 56%);
---Grey-200: hsl(185, 41%, 84%);
---Grey-50: hsl(189, 47%, 97%);
---White: hsl(0, 100%, 100%);
+  /* ## Typography */
 
-/* ## Typography */
+  --Font-size: 24px;
 
---Font-size: 24px;
-
-/* Misc */
---B-radius: 1.7rem;
+  /* Misc */
+  --B-radius: 1.7rem;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Space Mono";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+  font-weight: 700;
 }
 
-hmtl {
-    height:100vh;
-    width: 100vw;
+html {
+  height: 100vh;
+  width: 100vw;
 }
 
 .body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .main-container {
-    background-color: var(--Grey-200);
+  background-color: var(--Grey-200);
 }
 
 .header {
-    text-align: center;
-    & .header-text {
-        letter-spacing: .3rem;
-        color: var(--Green-900);
-        padding: 2rem 0;
-    }
+  text-align: center;
+  & .header-text {
+    letter-spacing: 0.3rem;
+    color: var(--Green-900);
+    padding: 2rem 0;
+  }
 }
 
 .bill {
-    background-color: var(--White);
-    padding: 1.5rem;
-    border-top-left-radius: var(--B-radius);
-    border-top-right-radius: var(--B-radius);
+  background-color: var(--White);
+  padding: 1.7rem;
+  border-top-left-radius: var(--B-radius);
+  border-top-right-radius: var(--B-radius);
+}
+
+fieldset {
+  border: none;
+  margin: 1rem auto;
+  & .percent {
+    display: none;
+  }
+
+  & label,
+  button {
+    display: inline-block;
+    width: 48%;
+    height: 36px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: var(--Green-900);
+    color: var(--White);
+    font-size: var(--Font-size);
+    font-weight: 700;
+    margin: 0.8rem 0 0 0;
+  }
+
+  & button {
+    background-color: var(--Grey-50);
+    color: var(--Green-900);
+    border: none;
+    font-size: 1.3rem;
+  }
+
+  #five:checked ~ label[for="five"],
+  #ten:checked ~ label[for="ten"],
+  #fifteen:checked ~ label[for="fifteen"],
+  #twenty-five:checked ~ label[for="twenty-five"],
+  #fifty:checked ~ label[for="fifty"] {
+    background-color: var(--Green-400);
+    color: var(--Green-900);
+  }
+
 }

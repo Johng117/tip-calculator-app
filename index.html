@@ -31,14 +31,34 @@
       <section class="bill">
         Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount
         / person Total / person Reset
+
+        <form
+          class="tip-form"
+          id="tip-form"
+          target="_blank"
+          autocomplete="off"
+          novalidate
+        >
+          <label for="bill-amount">Bill</label><br />
+          <input type="number" id="bill-amount" name="bill-amount" /><br />
+          <fieldset class="tip-container" name="tip-container" form="tip-form">
+            <legend>Select Tip %</legend>
+            <input type="radio" id="five" name="percent" class="percent" />
+            <label for="five">5%</label>
+            <input type="radio" id="ten" name="percent" class="percent" />
+            <label for="ten">10%</label>
+            <input type="radio" id="fifteen" name="percent" class="percent" />
+            <label for="fifteen">15%</label>
+            <input type="radio" id="twenty-five" name="percent" class="percent" />
+            <label for="twenty-five">25%</label>
+            <input type="radio" id="fifty" name="percent" class="percent" />
+            <label for="fifty">50%</label>
+            <button>Custom</button>
+          </fieldset>
+          <label for="people-no">Number of People</label><br />
+          <input type="text" id="people-no" name="people-no" />
+        </form>
       </section>
-      <form
-        class="tip-form"
-        id="tip-form"
-        target="_blank"
-        autocomplete="off"
-        novalidate
-      ></form>
     </main>
   </body>
 </html>
