@@ -31,6 +31,7 @@
 html {
   height: 100vh;
   width: 100vw;
+  background-color: var(--Grey-200);
 }
 
 .body {
@@ -39,7 +40,9 @@ html {
 }
 
 .main-container {
-  background-color: var(--Grey-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -56,27 +59,68 @@ html {
   padding: 1.7rem;
   border-top-left-radius: var(--B-radius);
   border-top-right-radius: var(--B-radius);
+  max-width: 32rem;
+  
+}
+
+.bill-amount-label, .people-no-label {
+  font-size: 0.8rem;
+  display: inline-block;
+  margin: 0 0 0.3rem 0;
+  color: var(--Green-900);
+}
+
+.bill-amount, .people-no {
+  width: 100%;
+  background-color: var(--Grey-50);
+  line-height: 2rem;
+  border: none;
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 0.5rem;
+  background-size: 0.6rem;
+  text-align: right;
+  padding-right: 0.5rem;
+  font-size: var(--Font-size);
+  color: var(--Green-900);
+  margin-bottom: 1rem;
+}
+
+::placeholder {
+  color: var(--Green-900);
+  opacity: 1; /* Firefox */
 }
 
 fieldset {
   border: none;
-  margin: 1rem auto;
+  margin: 1rem auto 1.5rem auto;
+  display:flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+  
   & .percent {
     display: none;
+  }
+
+  & legend {
+    font-size: .8rem;
+    color: var(--Green-900);
+    margin-bottom: .7rem;
   }
 
   & label,
   button {
     display: inline-block;
-    width: 48%;
     height: 36px;
+    width:48%;
     text-align: center;
     border-radius: 3px;
     background-color: var(--Green-900);
     color: var(--White);
     font-size: var(--Font-size);
     font-weight: 700;
-    margin: 0.8rem 0 0 0;
+    margin: 0 0 0.8rem 0;
   }
 
   & button {
@@ -88,11 +132,14 @@ fieldset {
 
   #five:checked ~ label[for="five"],
   #ten:checked ~ label[for="ten"],
-  #fifteen:checked ~ label[for="fifteen"],
+  #fifteen:checked ~ label[for="fiheight:100%;fteen"],
   #twenty-five:checked ~ label[for="twenty-five"],
   #fifty:checked ~ label[for="fifty"] {
     background-color: var(--Green-400);
     color: var(--Green-900);
   }
+}
 
+.people-no{
+  background-image: url("./images/icon-person.svg");
 }
