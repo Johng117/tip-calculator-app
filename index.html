@@ -62,6 +62,7 @@
             <input type="radio" id="fifty" name="percent" class="percent" />
             <label for="fifty">50%</label>
             <button>Custom</button>
+            <input type="number" id="custom-input" class="custom-input" name="custom-input">
           </fieldset>
           <label for="people-no" class="people-no-label">Number of People</label
           ><br />
@@ -73,7 +74,19 @@
             placeholder="0"
           />
         </form>
-        <section>Tip Amount / person Total / person Reset</section>
+        <section class="tip-total-container">
+          <div class="tip-balance">
+            <h4 class="tip-amount">Tip Amount</h4>
+            <h5 class="person">/ person</h5>
+          </div>
+          <div class="tip-figure">$0.00</div>
+          <div class="total-balance">
+            <h4 class="total-amount">Total</h4>
+            <h5 class="person">/ person</h5>
+          </div>
+          <div class="total-figure">$0.00</div>
+          <button class="reset-button">RESET</button>
+        </section>
       </section>
     </main>
   </body>
