@@ -58,6 +58,8 @@ html {
   border-top-right-radius: var(--B-radius);
 }
 
+input:focus {outline:none;}
+
 .bill-amount-label,
 .people-no-label {
   font-size: 0.8rem;
@@ -85,7 +87,7 @@ html {
 
 ::placeholder {
   color: var(--Green-900);
-  opacity: 1; 
+  opacity: 1;
 }
 
 fieldset {
@@ -110,7 +112,7 @@ fieldset {
   button,
   .custom-input {
     display: inline-block;
-    height: 36px;
+    height: 2.2rem;
     width: 48%;
     text-align: center;
     border-radius: 3px;
@@ -193,9 +195,10 @@ fieldset {
   font-size: 1rem;
 }
 
-/* @media (width>=34rem) {
+@media (width>=34rem) {
   .bill {
     border-radius: var(--B-radius);
+    width: 32rem;
   }
 }
 
@@ -203,7 +206,43 @@ fieldset {
   .bill {
     max-width: 50rem;
     width: 50rem;
+    height: 25rem;
     display: flex;
     flex-direction: row;
+    column-gap: 4%;
   }
-} */
+
+  form {
+    padding: 0.5rem;
+  }
+
+  form,
+  .tip-total-container {
+    width: 48%;
+  }
+
+  label,
+  button,
+  .custom-input {
+    width: 20%;
+  }
+  .bill-amount-label,
+  .people-no-label {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  fieldset {
+    margin: 1.5rem auto;
+    & label,
+    button,
+    .custom-input {
+      width: 30%;
+      height: 2.5rem;
+    }
+  }
+
+  .tip-total-container {
+    margin: 0;
+  }
+}
