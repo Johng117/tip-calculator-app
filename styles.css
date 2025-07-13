@@ -1,10 +1,8 @@
 :root {
   /* ### Primary */
-
   --Green-400: hsl(172, 67%, 45%);
 
   /* ### Neutral */
-
   --Green-900: hsl(183, 100%, 15%);
   --Grey-500: hsl(186, 14%, 43%);
   --Grey-400: hsl(184, 14%, 56%);
@@ -13,7 +11,6 @@
   --White: hsl(0, 100%, 100%);
 
   /* ## Typography */
-
   --Font-size: 24px;
 
   /* Misc */
@@ -59,7 +56,6 @@ html {
   padding: 1.7rem;
   border-top-left-radius: var(--B-radius);
   border-top-right-radius: var(--B-radius);
-  max-width: 32rem;
 }
 
 .bill-amount-label,
@@ -89,7 +85,7 @@ html {
 
 ::placeholder {
   color: var(--Green-900);
-  opacity: 1; /* Firefox */
+  opacity: 1; 
 }
 
 fieldset {
@@ -194,4 +190,20 @@ fieldset {
   background-color: var(--Green-400);
   color: var(--Green-900);
   margin-top: 0.8rem;
+  font-size: 1rem;
 }
+
+/* @media (width>=34rem) {
+  .bill {
+    border-radius: var(--B-radius);
+  }
+}
+
+@media (width>=65rem) {
+  .bill {
+    max-width: 50rem;
+    width: 50rem;
+    display: flex;
+    flex-direction: row;
+  }
+} */
