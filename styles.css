@@ -14,7 +14,7 @@
   --Font-size: 24px;
 
   /* Misc */
-  --B-radius: 1.7rem;
+  --B-radius: 1rem;
 }
 
 * {
@@ -32,8 +32,8 @@ html {
 }
 
 .body {
-  height: 100vh;
-  width: 100vw;
+  height: inherit;
+  width: inherit;
 }
 
 .main-container {
@@ -58,7 +58,9 @@ html {
   border-top-right-radius: var(--B-radius);
 }
 
-input:focus {outline:none;}
+input:focus {
+  outline: none;
+}
 
 .bill-amount-label,
 .people-no-label {
@@ -86,7 +88,7 @@ input:focus {outline:none;}
 }
 
 ::placeholder {
-  color: var(--Green-900);
+  color: var(--Grey-400);
   opacity: 1;
 }
 
@@ -160,10 +162,15 @@ fieldset {
   row-gap: 1rem;
   margin-bottom: 2rem;
 
+  & .tip-balance,
+  .total-balance {
+    width: 40%;
+  }
+
   & .tip-amount,
   .total-amount {
     font-size: 0.7rem;
-    padding-top: 0.3rem;
+    padding-top: 0.7rem;
     color: var(--White);
   }
 
@@ -175,8 +182,10 @@ fieldset {
   & .tip-figure,
   .total-figure {
     text-align: end;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: var(--Green-400);
+    width: 60%;
+    overflow: scroll;
   }
 }
 
@@ -203,6 +212,10 @@ fieldset {
 }
 
 @media (width>=65rem) {
+  .main-container {
+    margin-top: 10vh;
+  }
+
   .bill {
     max-width: 50rem;
     width: 50rem;
@@ -210,6 +223,7 @@ fieldset {
     display: flex;
     flex-direction: row;
     column-gap: 4%;
+    margin-top: 2rem;
   }
 
   form {
@@ -244,5 +258,25 @@ fieldset {
 
   .tip-total-container {
     margin: 0;
+    padding: 2rem;
+
+    & .tip-amount,
+    .total-amount {
+      font-size: 0.8rem;
+    }
+
+    & .person {
+      font-size: 0.7rem;
+    }
+
+    & .tip-figure,
+    .total-figure {
+      font-size: 2.2rem;
+    }
+
+    & .reset-button {
+      margin-top: auto;
+      
+    }
   }
 }
