@@ -140,7 +140,7 @@ fieldset {
 
   #five:checked ~ label[for="five"],
   #ten:checked ~ label[for="ten"],
-  #fifteen:checked ~ label[for="fiheight:100%;fteen"],
+  #fifteen:checked ~ label[for="fifteen"],
   #twenty-five:checked ~ label[for="twenty-five"],
   #fifty:checked ~ label[for="fifty"] {
     background-color: var(--Green-400);
@@ -158,34 +158,39 @@ fieldset {
   border-radius: 0.5rem;
   padding: 1.8rem 1.3rem 1.3rem 1.3rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   row-gap: 1rem;
   margin-bottom: 2rem;
 
-  & .tip-balance,
-  .total-balance {
-    width: 40%;
-  }
+  & .tip-section,
+  .total-section {
+    display: flex;
 
-  & .tip-amount,
-  .total-amount {
-    font-size: 0.7rem;
-    padding-top: 0.7rem;
-    color: var(--White);
-  }
+    & .tip-balance,
+    .total-balance {
+      width: 40%;
+    }
 
-  & .person {
-    font-size: 0.6rem;
-    color: var(--Grey-400);
-  }
+    & .tip-amount,
+    .total-amount {
+      font-size: 0.7rem;
+      padding-top: 0.7rem;
+      color: var(--White);
+    }
 
-  & .tip-figure,
-  .total-figure {
-    text-align: end;
-    font-size: 2rem;
-    color: var(--Green-400);
-    width: 60%;
-    overflow: scroll;
+    & .person {
+      font-size: 0.6rem;
+      color: var(--Grey-400);
+    }
+
+    & .tip-figure,
+    .total-figure {
+      text-align: end;
+      font-size: 2rem;
+      color: var(--Green-400);
+      width: 60%;
+      overflow: scroll;
+    }
   }
 }
 
@@ -226,8 +231,14 @@ fieldset {
     margin-top: 2rem;
   }
 
+
+
   form {
     padding: 0.5rem;
+
+    & .bill-amount, .people-no {
+      line-height: 2.3rem;
+    }
   }
 
   form,
@@ -259,24 +270,32 @@ fieldset {
   .tip-total-container {
     margin: 0;
     padding: 2rem;
+    gap: 0;
 
-    & .tip-amount,
-    .total-amount {
-      font-size: 0.8rem;
+    & .tip-section,
+    .total-section {
+
+      & .tip-amount,
+      .total-amount {
+        font-size: 0.8rem;
+      }
+
+      & .person {
+        font-size: 0.7rem;
+      }
+
+      & .tip-figure,
+      .total-figure {
+        font-size: 2.2rem;
+      }
     }
 
-    & .person {
-      font-size: 0.7rem;
-    }
-
-    & .tip-figure,
-    .total-figure {
-      font-size: 2.2rem;
+    & .tip-section {
+      margin-bottom: 1.7rem;
     }
 
     & .reset-button {
       margin-top: auto;
-      
     }
   }
 }
