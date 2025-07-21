@@ -136,6 +136,9 @@ fieldset {
     background-color: var(--White);
     border-color: var(--Grey-500);
     display: none;
+    text-align: end;
+    padding-right: .3rem;
+    color: var(--Green-900);
   }
 
   #five:checked ~ label[for="five"],
@@ -189,7 +192,6 @@ fieldset {
       font-size: 2rem;
       color: var(--Green-400);
       width: 60%;
-      overflow: scroll;
     }
   }
 }
