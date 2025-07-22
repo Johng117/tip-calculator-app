@@ -42,34 +42,28 @@
             class="bill-amount"
             placeholder="0"
           /><br />
-          <fieldset class="tip-container" name="tip-container" form="tip-form">
-            <legend>Select Tip %</legend>
-            <input type="radio" id="five" name="percent" class="percent" />
-            <label for="five" class="percent-label">5%</label>
-            <input type="radio" id="ten" name="percent" class="percent" />
-            <label for="ten" class="percent-label">10%</label>
-            <input type="radio" id="fifteen" name="percent" class="percent" />
-            <label for="fifteen" class="percent-label">15%</label>
-            <input
-              type="radio"
-              id="twenty-five"
-              name="percent"
-              class="percent"
-            />
-            <label for="twenty-five" class="percent-label">25%</label>
-            <input type="radio" id="fifty" name="percent" class="percent" />
-            <label for="fifty" class="percent-label">50%</label>
-            <button class="custom-button" id="custom-button" type="button">
-              Custom
-            </button>
-            <input
-              type="text"
-              id="custom-input"
-              class="custom-input"
-              name="custom-input"
-              placeholder="0"
-            />
-          </fieldset>
+
+        <section class="tip-container" id="tip-container">
+          <div class="tip" id="five">5%</div>
+          <div class="tip" id="ten">10%</div>
+          <div class="tip" id="fifteen">15%</div>
+          <div class="tip" id="twenty-five">25%</div>
+          <div class="tip" id="fifty">50%</div>
+            <button class="custom-button" id="custom-button" type="button"> 
+               Custom 
+             </button> 
+             <input 
+               type="text" 
+               id="custom-input" 
+               class="custom-input" 
+               name="custom-input" 
+               placeholder="0" 
+             /> 
+        </section>
+
+
+
+          
           <label for="people-no" class="people-no-label">Number of People</label
           ><br />
           <input

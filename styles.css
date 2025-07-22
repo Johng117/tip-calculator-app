@@ -92,25 +92,15 @@ input:focus {
   opacity: 1;
 }
 
-fieldset {
-  border: none;
+
+.tip-container {
   margin: 1rem auto 1.5rem auto;
   display: flex;
   flex-wrap: wrap;
   gap: 4%;
   justify-content: center;
 
-  & .percent {
-    display: none;
-  }
-
-  & legend {
-    font-size: 0.8rem;
-    color: var(--Green-900);
-    margin-bottom: 0.7rem;
-  }
-
-  & label,
+  & .tip,
   button,
   .custom-input {
     display: inline-block;
@@ -123,6 +113,7 @@ fieldset {
     font-size: var(--Font-size);
     font-weight: 700;
     margin: 0 0 0.8rem 0;
+    cursor: pointer;
   }
 
   & button {
@@ -137,16 +128,7 @@ fieldset {
     border-color: var(--Grey-500);
     display: none;
     text-align: end;
-    padding-right: .3rem;
-    color: var(--Green-900);
-  }
-
-  #five:checked ~ label[for="five"],
-  #ten:checked ~ label[for="ten"],
-  #fifteen:checked ~ label[for="fifteen"],
-  #twenty-five:checked ~ label[for="twenty-five"],
-  #fifty:checked ~ label[for="fifty"] {
-    background-color: var(--Green-400);
+    padding-right: 0.3rem;
     color: var(--Green-900);
   }
 }
@@ -233,12 +215,11 @@ fieldset {
     margin-top: 2rem;
   }
 
-
-
   form {
     padding: 0.5rem;
 
-    & .bill-amount, .people-no {
+    & .bill-amount,
+    .people-no {
       line-height: 2.3rem;
     }
   }
@@ -248,20 +229,15 @@ fieldset {
     width: 48%;
   }
 
-  label,
-  button,
-  .custom-input {
-    width: 20%;
-  }
   .bill-amount-label,
   .people-no-label {
     width: 50%;
     font-size: 0.9rem;
   }
 
-  fieldset {
+  .tip-container {
     margin: 1.5rem auto;
-    & label,
+    & .tip,
     button,
     .custom-input {
       width: 30%;
@@ -276,7 +252,6 @@ fieldset {
 
     & .tip-section,
     .total-section {
-
       & .tip-amount,
       .total-amount {
         font-size: 0.8rem;
