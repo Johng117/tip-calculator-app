@@ -60,6 +60,7 @@ html {
 
 input:focus {
   outline: none;
+  border: 2px solid var(--Green-400);
 }
 
 .bill-amount-label,
@@ -70,12 +71,20 @@ input:focus {
   color: var(--Green-900);
 }
 
+.bill-amount-error,
+.people-no-error {
+  font-size: 0.8rem;
+  float: right;
+  color: red;
+  display: none;
+}
+
 .bill-amount,
 .people-no {
   width: 100%;
   background-color: var(--Grey-50);
   line-height: 2rem;
-  border: none;
+  border: 2px solid white;
   background-image: url("./images/icon-dollar.svg");
   background-repeat: no-repeat;
   background-position: 0.5rem;
@@ -85,13 +94,13 @@ input:focus {
   font-size: var(--Font-size);
   color: var(--Green-900);
   margin-bottom: 1rem;
+  border-radius: .3rem;
 }
 
 ::placeholder {
   color: var(--Grey-400);
   opacity: 1;
 }
-
 
 .tip-container {
   margin: 1rem auto 1.5rem auto;
@@ -207,7 +216,7 @@ input:focus {
 
   .bill {
     max-width: 50rem;
-    width: 50rem;
+    width: 48rem;
     height: 25rem;
     display: flex;
     flex-direction: row;

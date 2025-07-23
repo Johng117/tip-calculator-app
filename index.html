@@ -34,7 +34,10 @@
           autocomplete="off"
           novalidate
         >
-          <label for="bill-amount" class="bill-amount-label">Bill</label><br />
+          <label for="bill-amount" class="bill-amount-label">Bill</label
+          ><span class="bill-amount-error" id="bill-amount-error"
+            >Can't be zero</span
+          ><br />
           <input
             type="text"
             id="bill-amount"
@@ -43,28 +46,27 @@
             placeholder="0"
           /><br />
 
-        <section class="tip-container" id="tip-container">
-          <div class="tip" id="five">5%</div>
-          <div class="tip" id="ten">10%</div>
-          <div class="tip" id="fifteen">15%</div>
-          <div class="tip" id="twenty-five">25%</div>
-          <div class="tip" id="fifty">50%</div>
-            <button class="custom-button" id="custom-button" type="button"> 
-               Custom 
-             </button> 
-             <input 
-               type="text" 
-               id="custom-input" 
-               class="custom-input" 
-               name="custom-input" 
-               placeholder="0" 
-             /> 
-        </section>
+          <section class="tip-container" id="tip-container">
+            <button class="tip" id="5" type="button">5%</button>
+            <button class="tip" id="10" type="button">10%</button>
+            <button class="tip" id="15" type="button">15%</button>
+            <button class="tip" id="25" type="button">25%</button>
+            <button class="tip" id="50" type="button">50%</button>
+            <button class="custom-button" id="custom-button" type="button">
+              Custom
+            </button>
+            <input
+              type="text"
+              id="custom-input"
+              class="custom-input"
+              name="custom-input"
+              placeholder="0"
+            />
+          </section>
 
-
-
-          
           <label for="people-no" class="people-no-label">Number of People</label
+          ><span class="people-no-error" id="people-no-error"
+            >Can't be zero</span
           ><br />
           <input
             type="text"
