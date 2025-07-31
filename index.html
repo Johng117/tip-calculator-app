@@ -39,13 +39,14 @@
             >Can't be zero</span
           ><br />
           <input
-            type="text"
+            type="number"
             id="bill-amount"
             name="bill-amount"
             class="bill-amount"
             placeholder="0"
+            min="0"
           /><br />
-
+          <h5 class="tip-text" id="tip-text">Select tip %</h5>  
           <section class="tip-container" id="tip-container">
             <button class="tip" id="5" type="button">5%</button>
             <button class="tip" id="10" type="button">10%</button>
@@ -56,24 +57,28 @@
               Custom
             </button>
             <input
-              type="text"
+              type="number"
               id="custom-input"
               class="custom-input"
               name="custom-input"
               placeholder="0"
+              min="0"
+              max="99"
             />
           </section>
 
           <label for="people-no" class="people-no-label">Number of People</label
           ><span class="people-no-error" id="people-no-error"
-            >Can't be zero</span
+            >Cant be zero</span
           ><br />
           <input
-            type="text"
+            type="number"
             id="people-no"
             name="people-no"
             class="people-no"
             placeholder="0"
+            min="0"
+            max="99"
           />
         </form>
         <section class="tip-total-container">
