@@ -99,6 +99,10 @@ input:focus {
   cursor: pointer;
 }
 
+.bill-amount {
+  margin-bottom: 2rem;
+}
+
 ::placeholder {
   color: var(--Grey-400);
   opacity: 1;
@@ -222,7 +226,7 @@ input:focus {
 
   .bill {
     max-width: 50rem;
-    width: 48rem;
+    width: 46rem;
     height: 25rem;
     display: flex;
     flex-direction: row;
@@ -277,7 +281,7 @@ input:focus {
 
       & .tip-figure,
       .total-figure {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
       }
     }
 
