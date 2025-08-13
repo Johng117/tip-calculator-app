@@ -9,6 +9,9 @@ const peopleInputElement = document.getElementById("people-no");
 const billErrorElement = document.getElementById("bill-amount-error");
 const peopleErrorElement = document.getElementById("people-no-error");
 
+const tipFigure = document.getElementById("tip-figure");
+const totalFigure = document.getElementById("total-figure");
+
 // error functions
 function billValueError(value) {
   if (value <= 0) {
@@ -16,6 +19,7 @@ function billValueError(value) {
     billInputElement.style.border = "2px solid hsl(0,100%,50%)";
     return false;
   }
+  return true;
 }
 
 function noOfPeopleError(value) {
@@ -24,6 +28,7 @@ function noOfPeopleError(value) {
     peopleInputElement.style.border = "2px solid hsl(0,100%,50%)";
     return false;
   }
+  return true;
 }
 
 // functions to reset input states
@@ -37,6 +42,7 @@ function resetPeopleNumber() {
   resetSelectTip();
   peopleErrorElement.style.display = "none";
   peopleInputElement.style.border = "2px solid hsl(172, 67%, 45%)";
+
 }
 
 // function to remove the custom button and show the custom input field
@@ -84,7 +90,18 @@ function toggleTip(e) {
 
 // calculation function
 function calcTip(dataObj) {
-  
+  console.log("dataObj", dataObj);
+
+  const billToNumber = Number(dataObj["bill-amount"]);
+  const peopleToNumber = Number(dataObj["people-no"]);
+  const tipPercentageToNumber = Number(`.${dataObj["tip"]}`);
+
+  const tipPerPerson = (billToNumber * tipPercentageToNumber) / peopleToNumber;
+  const totalPerPerson = (billToNumber + tipPerPerson) / peopleToNumber;
+  console.log("tipPerPerson", tipPerPerson);
+  console.log("totalPerPerson", totalPerPerson);
+  tipFigure.innerHTML = `$${tipPerPerson.toFixed(2)}`;
+  totalFigure.innerHTML = `$${totalPerPerson.toFixed(2)}`;
 }
 
 // function to handle form data
@@ -93,6 +110,9 @@ function handleFormInputs(percentage) {
   data["tip"] = percentage;
   const validBill = billValueError(Number(data["bill-amount"]));
   const validPeople = noOfPeopleError(Number(data["people-no"]));
+
+  console.log("validBill", validBill);
+  console.log("validPeople", validPeople);
 
   if (validBill && validPeople) {
     calcTip(data);
@@ -106,5 +126,5 @@ tipsArray.forEach((tip) => {
 
 customBtn.addEventListener("click", customBtnOn);
 customInput.addEventListener("click", customSubmit);
-billInputElement.addEventListener("change", resetBillInput);
-peopleInputElement.addEventListener("change", resetPeopleNumber);
+billInputElement.addEventListener("input", resetBillInput);
+peopleInputElement.addEventListener("input", resetPeopleNumber);
